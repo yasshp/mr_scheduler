@@ -102,7 +102,7 @@ if not daily.empty:
                     ).add_to(m)
 
                 # Render map
-                st_folium(m, width=None, height=400)
+                st_folium(m, width=None, height=400, returned_objects=[])
              else:
                  st.caption("No valid GPS coordinates found for this route.")
         else:
@@ -159,3 +159,4 @@ with c_done:
             st.markdown(f"~~{row['customer_name']}~~")
 
             st.caption(f"Finished at {row['end_time']}")
+
