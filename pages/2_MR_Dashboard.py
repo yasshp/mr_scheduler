@@ -178,7 +178,7 @@ st.set_page_config(page_title="MR Workflow", page_icon="⚡", layout="wide")
 st.markdown("""<style>[data-testid="stSidebarNav"] {display: none;}</style>""", unsafe_allow_html=True)
 
 st.sidebar.title("Navigation")
-st.sidebar.page_link("app.py", label="Home", icon="🏠")
+st.sidebar.page_link("Login.py", label="Home")
 
 # Access Check
 if 'logged_in' not in st.session_state or not st.session_state.logged_in:
@@ -296,3 +296,4 @@ with c_done:
         with st.container(border=True):
             st.markdown(f"~~{row['customer_name']}~~")
             st.caption(f"Finished at {row['end_time']}")
+
