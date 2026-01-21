@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+xgboost
+scikit-learn
+requests
+Pillow
+pytesseract
+st-gsheets-connection
+folium
+streamlit-folium
+gspread            
+oauth2client
