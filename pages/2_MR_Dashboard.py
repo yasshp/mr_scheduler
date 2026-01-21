@@ -127,21 +127,21 @@ with c_todo:
         
         with st.container(border=True):
             c_time, c_type = st.columns([1, 2])
-            c_time.markdown(f"** {row['start_time']}**")
+            c_time.markdown(f"{row['start_time']}")
             c_type.caption(f"{row['activity_type']}")
             
             st.markdown(f"### {row['customer_name']}")
-            if dr_name: st.markdown(f"** {dr_name}**")
+            if dr_name: st.markdown(f"{dr_name}")
             
             st.caption(f"📍 {row['locality']}")
             
             with st.expander(f"🔻 Trip: {dist} km ({dur} min)"):
-                st.markdown("**🚗 Logistics**")
+                st.markdown("Logistics")
                 t1, t2 = st.columns(2)
-                t1.info(f" **{dist} km**")
-                t2.info(f" **{dur} min**")
+                t1.info(f" {dist} km")
+                t2.info(f" {dur} min")
                 st.divider()
-                st.markdown("**💡 Talking Strategy**")
+                st.markdown("💡 Talking Strategy")
                 st.write(row.get('suggested_talking_points', 'No strategy provided.'))
                 
             if st.button("Mark Complete", key=f"btn_{row['activity_id']}", use_container_width=True, type="primary"):
@@ -159,4 +159,5 @@ with c_done:
             st.markdown(f"~~{row['customer_name']}~~")
 
             st.caption(f"Finished at {row['end_time']}")
+
 
